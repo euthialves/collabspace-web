@@ -1,23 +1,24 @@
-import { Container, Cover, Divider, ButtonEdit } from "./styles";
-
 import Avatar from "../Avatar";
+import { ButtonEdit, Container, Cover, Divider } from "./styles";
 
 const ProfileCard: React.FC = () => {
   return (
     <Container>
       <header>
-        <Cover src="https://media.sudouest.fr/6961772/1000x500/73156112.jpg?v=1637078904" />
+        <Cover src="https://diariodecuba.com/sites/default/files/images/2022-08/jair-bolsonaro-brasil-lula-da-silva.jpg" />
+
         <div>
           <Avatar />
         </div>
       </header>
 
       <main>
-        <h1>P_Bolsonaro✔</h1>
-        <p>jairmessias@gmail.com</p>
+        <h1>Pr. Bolsonaro</h1>
+        <p>euthiagoalves2022@gmail.com</p>
       </main>
 
       <Divider />
+
       <footer>
         <ButtonEdit>Editar perfil</ButtonEdit>
       </footer>

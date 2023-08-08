@@ -1,19 +1,20 @@
-import { Container, Form, Input, Label, Button } from "./styles";
+import { Button, Container, Form, Input, Label, Group } from "./styles";
 
 const Login: React.FC = () => {
   return (
     <Container>
       <Form>
         <h1>Entrar</h1>
-        <div>
-          <Label htmlFor="">Endereço de e-mail</Label>
-          <Input type="text" placeholder="Digite seu e-mail" />
-        </div>
 
-        <div>
-          <Label htmlFor="">Sua senha secreta</Label>
+        <Group>
+          <Label htmlFor=""> Endereço de e-mail </Label>
+          <Input type="text" placeholder="Digite seu e-email" />
+        </Group>
+
+        <Group>
+          <Label htmlFor=""> Sua senha secreta </Label>
           <Input type="text" placeholder="Digite sua senha" />
-        </div>
+        </Group>
 
         <Button>Fazer login</Button>
       </Form>

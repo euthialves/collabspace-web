@@ -1,6 +1,6 @@
 import Header from "../../components/Header";
-import ProfileCard from "../../components/ProfileCard";
 import Post from "../../components/Post";
+import ProfileCard from "../../components/ProfileCard";
 
 import { Container, Content, Posts } from "./styles";
 
@@ -11,6 +11,7 @@ const Feed: React.FC = () => {
 
       <Content>
         <ProfileCard />
+
         <Posts>
           <Post />
         </Posts>

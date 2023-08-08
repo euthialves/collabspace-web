@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 export const Container = styled.aside`
   width: 25%;
-  height: 325px;
+  height: 350px;
   background: var(--zinc-800);
 
   border-radius: 8px;
@@ -11,7 +11,6 @@ export const Container = styled.aside`
     display: flex;
     flex-direction: column;
     align-items: center;
-
     div {
       margin-top: -28px;
     }
@@ -24,6 +23,7 @@ export const Container = styled.aside`
     justify-content: center;
 
     margin-top: 1rem;
+
     h1 {
       font-size: 1rem;
       color: var(--zinc-200);

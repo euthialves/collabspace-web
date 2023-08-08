@@ -1,44 +1,62 @@
-import { Container, Content, Hashtags, Divider } from "./style";
 import Avatar from "../Avatar";
+import Comment from "../Comment";
+import {
+  Author,
+  AuthorInfo,
+  Comments,
+  Container,
+  Content,
+  Description,
+  Divider,
+  CommentForm,
+  Hastags,
+  Header,
+} from "./styles";
+
 const Post: React.FC = () => {
   return (
     <Container>
-      <header>
-        <div>
+      <Header>
+        <Author>
           <Avatar />
 
-          <section>
-            <h1>P_Bolsonaro✔</h1>
-            <p>jairmessias@gmail.com</p>
-          </section>
-        </div>
+          <AuthorInfo>
+            <h1>Roberto Neto</h1>
+            <p>RobertoModenezi@gmail.com</p>
+          </AuthorInfo>
+        </Author>
 
-        <p>Publicado à 1H</p>
-      </header>
-      <main>
-        <Content>
-          <p>Lula ladrão 🚨</p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur
-            eos minus, fugit odio inventore tenetur, quia molestias illo sequi
-            sunt ducimus consectetur iste sapiente obcaecati totam aspernatur
-            natus, similique fuga.
-          </p>
-        </Content>
+        <time>Publicado à 1h</time>
+      </Header>
 
-        <Hashtags>
-          <span>#BOLSONARO_PRESIDENTE </span>
-          <span>#LULALADRÃO</span>
-        </Hashtags>
-      </main>
+      <Content>
+        <Description>
+          <p>Fala Galera</p>
+          <p>O mais importante é que ela protege meu Baseballbet!!!</p>
+        </Description>
+        <Hastags>
+          <span>#collabspace</span>
+          <span>#confia</span>
+        </Hastags>
+      </Content>
+
       <Divider />
 
-      <footer>
+      <CommentForm>
         <h1>Deixe seu comentário</h1>
+
         <textarea name=""></textarea>
+
         <button>Comentar</button>
-      </footer>
+      </CommentForm>
+
+      <Divider />
+
+      <Comments>
+        <Comment />
+      </Comments>
     </Container>
   );
 };
+
 export default Post;

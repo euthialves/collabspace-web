@@ -6,6 +6,6 @@ export const Container = styled.img`
   background: white;
   border-radius: 6px;
 
-  border: 2px solid var(--zinx-800);
-  box-shadow: 0px 0px 4px var(--emerald-500);
+  border: 3px solid var(--zinc-800);
+  box-shadow: 0px 0px 1px 2px var(--emerald-500);
 `;
