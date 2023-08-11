@@ -1,28 +1,50 @@
+import { useState } from "react";
+import { ThumbsUp, ChatCircleText } from "phosphor-react";
+
 import Avatar from "../Avatar";
 import Comment from "../Comment";
+import InputArea from "../InputArea";
+import Button from "../Button";
+
 import {
+  Container,
+  Header,
   Author,
   AuthorInfo,
-  Comments,
-  Container,
   Content,
   Description,
+  Hashtags,
   Divider,
+  Interactions,
+  CountReaction,
+  CountCommentAndShared,
+  InteractionAction,
+  ButtonAction,
   CommentForm,
-  Hastags,
-  Header,
+  Comments,
+  CommentArea,
+  InteractionInfo,
 } from "./styles";
 
 const Post: React.FC = () => {
+  const [commentArea, setCommentArea] = useState(false);
+
+  function toggleCommentArea() {
+    setCommentArea(!commentArea);
+  }
+
   return (
     <Container>
       <Header>
         <Author>
-          <Avatar />
+          <Avatar
+            src="https://b.fssta.com/uploads/application/soccer/headshots/713.png"
+            borderEffect
+          />
 
           <AuthorInfo>
-            <h1>Roberto Neto</h1>
-            <p>RobertoModenezi@gmail.com</p>
+            <h1>Neymar Jr</h1>
+            <p>ney@hotney.com</p>
           </AuthorInfo>
         </Author>
 
@@ -31,30 +53,60 @@ const Post: React.FC = () => {
 
       <Content>
         <Description>
-          <p>Fala Galera</p>
-          <p>O mais importante é que ela protege meu Baseballbet!!!</p>
+          <p>Fala galeraa 👋</p>
+          <p>
+            Você pode sempre sonhar, e seus sonhos se tornarão sonhos, e a
+            realidade se tornará realidade. Mas é você que tem que torná-los
+            realidade. 🚀
+          </p>
         </Description>
-        <Hastags>
+
+        <Hashtags>
           <span>#collabspace</span>
           <span>#confia</span>
-        </Hastags>
+        </Hashtags>
       </Content>
 
-      <Divider />
+      <Interactions>
+        <InteractionInfo>
+          <CountReaction>
+            <span>
+              <ThumbsUp size={19} width="bold" />
+              50000
+            </span>
+          </CountReaction>
+          <CountCommentAndShared>
+            <span onClick={toggleCommentArea}>7 comentários</span>
+          </CountCommentAndShared>
+        </InteractionInfo>
 
-      <CommentForm>
-        <h1>Deixe seu comentário</h1>
+        <InteractionAction>
+          <ButtonAction>
+            <ThumbsUp size={22} />
+            Reagir
+          </ButtonAction>
+          <ButtonAction onClick={toggleCommentArea}>
+            <ChatCircleText size={22} />
+            Comentar
+          </ButtonAction>
+        </InteractionAction>
+      </Interactions>
 
-        <textarea name=""></textarea>
+      <CommentArea commentArea={commentArea}>
+        <CommentForm>
+          <h1>Deixe seu comentário</h1>
 
-        <button>Comentar</button>
-      </CommentForm>
+          <InputArea rows={3} placeholder="Escreva seu comentário aqui ..." />
 
-      <Divider />
+          <Button>Comentar</Button>
+        </CommentForm>
 
-      <Comments>
-        <Comment />
-      </Comments>
+        <Divider />
+
+        <Comments>
+          <Comment />
+        </Comments>
+      </CommentArea>
     </Container>
   );
 };

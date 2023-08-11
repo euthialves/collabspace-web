@@ -47,7 +47,7 @@ export const Input = styled.input`
   outline: 0;
 
   ::placeholder {
-    color: var(--zinc-500);
+    color: ar(--zinc-500);
   }
 `;
 
@@ -55,8 +55,8 @@ export const Button = styled.button`
   height: 48px;
   background: var(--emerald-600);
   color: var(--zinc-100);
-  font-weight: bold;
   font-size: 1.125rem;
+  font-weight: bold;
   padding: 0 1rem;
   border: 0;
   outline: 0;

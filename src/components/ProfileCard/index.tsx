@@ -1,27 +1,39 @@
+import {
+  Container,
+  Header,
+  Cover,
+  Content,
+  Divider,
+  ButtonEdit,
+  Footer,
+} from "./styles";
+
 import Avatar from "../Avatar";
-import { ButtonEdit, Container, Cover, Divider } from "./styles";
 
 const ProfileCard: React.FC = () => {
   return (
     <Container>
-      <header>
-        <Cover src="https://diariodecuba.com/sites/default/files/images/2022-08/jair-bolsonaro-brasil-lula-da-silva.jpg" />
+      <Header>
+        <Cover src="https://play-lh.googleusercontent.com/vrlmlARNAJe4aUWPaDh1cl_Hx5Sa79PvN3NUal7i4oOzNwLuPlyxPci8P6Zsfb3igQ=w750-h750" />
 
         <div>
-          <Avatar />
+          <Avatar
+            src="https://static-wp-tor15-prd.torcedores.com/wp-content/uploads/2015/03/Cristiano-Ronaldo.jpg"
+            borderEffect
+          />
         </div>
-      </header>
+      </Header>
 
-      <main>
-        <h1>Pr. Bolsonaro</h1>
-        <p>euthiagoalves2022@gmail.com</p>
-      </main>
+      <Content>
+        <h1>Natan Foleto</h1>
+        <p>natanfoleto@hotmail.com</p>
+      </Content>
 
       <Divider />
 
-      <footer>
-        <ButtonEdit>Editar perfil</ButtonEdit>
-      </footer>
+      <Footer>
+        <ButtonEdit>Editar seu perfil</ButtonEdit>
+      </Footer>
     </Container>
   );
 };
