@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { ThumbsUp, ChatCircleText } from "phosphor-react";
 
 import Avatar from "../Avatar";
@@ -16,15 +15,16 @@ import {
   Hashtags,
   Divider,
   Interactions,
+  InteractionInfo,
   CountReaction,
-  CountCommentAndShared,
+  CountComment,
   InteractionAction,
   ButtonAction,
+  CommentArea,
   CommentForm,
   Comments,
-  CommentArea,
-  InteractionInfo,
 } from "./styles";
+import { useState } from "react";
 
 const Post: React.FC = () => {
   const [commentArea, setCommentArea] = useState(false);
@@ -71,13 +71,14 @@ const Post: React.FC = () => {
         <InteractionInfo>
           <CountReaction>
             <span>
-              <ThumbsUp size={19} width="bold" />
-              50000
+              <ThumbsUp size={19} weight="bold" />
+              32
             </span>
           </CountReaction>
-          <CountCommentAndShared>
+
+          <CountComment>
             <span onClick={toggleCommentArea}>7 comentários</span>
-          </CountCommentAndShared>
+          </CountComment>
         </InteractionInfo>
 
         <InteractionAction>
@@ -85,6 +86,7 @@ const Post: React.FC = () => {
             <ThumbsUp size={22} />
             Reagir
           </ButtonAction>
+
           <ButtonAction onClick={toggleCommentArea}>
             <ChatCircleText size={22} />
             Comentar
@@ -92,7 +94,7 @@ const Post: React.FC = () => {
         </InteractionAction>
       </Interactions>
 
-      <CommentArea commentArea={commentArea}>
+      <CommentArea $commentArea={commentArea}>
         <CommentForm>
           <h1>Deixe seu comentário</h1>
 

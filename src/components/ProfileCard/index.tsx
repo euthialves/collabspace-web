@@ -14,11 +14,11 @@ const ProfileCard: React.FC = () => {
   return (
     <Container>
       <Header>
-        <Cover src="https://play-lh.googleusercontent.com/vrlmlARNAJe4aUWPaDh1cl_Hx5Sa79PvN3NUal7i4oOzNwLuPlyxPci8P6Zsfb3igQ=w750-h750" />
+        <Cover src="https://cutewallpaper.org/29/dual-screen-mr-robot-wallpaper/247286624.jpg" />
 
         <div>
           <Avatar
-            src="https://static-wp-tor15-prd.torcedores.com/wp-content/uploads/2015/03/Cristiano-Ronaldo.jpg"
+            src="https://i.pinimg.com/736x/b7/65/02/b76502e936cd209b595bd7a537e74db4.jpg"
             borderEffect
           />
         </div>
