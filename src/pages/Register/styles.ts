@@ -143,6 +143,7 @@ export const Button = styled.button`
   font-size: 1.125rem;
   font-weight: bold;
   padding: 0 1rem;
+  margin-bottom: 1.5rem;
   border: 0;
   outline: 0;
   border-radius: 4px;

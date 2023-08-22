@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+
 import {
   Container,
   Form,
@@ -15,6 +16,7 @@ const Login: React.FC = () => {
   const handleRegister = () => {
     navigate("/register");
   };
+
   return (
     <Container>
       <Form>
@@ -34,7 +36,7 @@ const Login: React.FC = () => {
 
         <LinkRegister>
           <p>Novo no Collabspace?</p>
-          <a onClick={handleRegister}>Cadastre-se aqui</a>
+          <a onClick={handleRegister}>Cadastre-se agora</a>
         </LinkRegister>
       </Form>
     </Container>

@@ -16,6 +16,8 @@ import {
 } from "./styles";
 
 const Register: React.FC = () => {
+  const navigate = useNavigate();
+
   const [name, setName] = useState("");
   const [birthDate, setBirthDate] = useState("");
   const [email, setEmail] = useState("");
@@ -33,7 +35,6 @@ const Register: React.FC = () => {
   const isPasswordStrong = password.match(
     /(?=^.{8,}$)((?=.*\d)(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/,
   );
-  const navigate = useNavigate();
 
   const handleLogin = () => {
     navigate("/");
@@ -157,8 +158,9 @@ const Register: React.FC = () => {
         >
           Cadastrar
         </Button>
+
         <LinkLogin>
-          <p>Já tem conta?</p>
+          <p>Já sou cadastrado?</p>
           <a onClick={handleLogin}>Entrar agora</a>
         </LinkLogin>
       </Form>
